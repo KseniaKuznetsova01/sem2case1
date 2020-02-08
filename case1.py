@@ -1,4 +1,5 @@
 import turtle
+from turtle import *
 print('''Select a fractal:
 1. The Koch Curve
 2. Koch's Snowflake.
@@ -10,22 +11,23 @@ print('''Select a fractal:
 8. Levi's Curve
 9. Building a binary tree.''')
 
+
 def koch(order, size):
     if order == 0:
-        turtle.forward(size)
+        forward(size)
     else:
         koch(order-1, size/3)
-        turtle.left(60)
+        left(60)
         koch(order-1, size/3)
-        turtle.right(120)
+        right(120)
         koch(order-1, size/3)
-        turtle.left(60)
+        left(60)
         koch(order-1, size/3)
 
 def main():
-    turtle.up()
-    turtle.goto(-100,0)
-    turtle.down()
+    up()
+    goto(-100,0)
+    down()
 n = int(input('Глубина рекурсии:'))
 a = int(input('Длина стороны:'))
 koch(n, a)

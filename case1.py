@@ -56,9 +56,9 @@ elif f == 2:
     n = int(input('Глубина рекурсии:'))
     a = int(input('Длина стороны:'))
     koch(n, a)
-    right(60)
+    right(120)
     koch(n, a)
-    right(60)
+    right(120)
     koch(n, a)
 
     main()
